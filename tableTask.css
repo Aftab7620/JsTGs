@@ -1,0 +1,85 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Table container for centering & shadow */
+.table-container {
+    width: 70%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Table styling */
+#studentTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+/* Header styling */
+#studentTable th {
+    background: linear-gradient(135deg, #4CAF50, #3d8b40);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Cell styling */
+#studentTable td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Alternate row colors */
+#studentTable tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Hover effect */
+#studentTable tr:hover {
+    background-color: #eaf4ea;
+    transition: background-color 0.3s ease;
+}
+
+/* Button styling */
+button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 18px;
+    font-size: 15px;
+    background: linear-gradient(135deg, #4CAF50, #3d8b40);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #45a049, #357a38);
+    transform: scale(1.05);
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
