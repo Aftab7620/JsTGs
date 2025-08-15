@@ -1,4 +1,3 @@
-
 document.getElementById("addButton").addEventListener("click", function () {
     const container = document.getElementById("addDiv");
 
