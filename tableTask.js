@@ -30,7 +30,6 @@ let students = [
     position: "Manager",
   },
 ];
-
 // Function to show students in table
 function showStudents() {
   let table = document.getElementById("studentTable");
