@@ -10,7 +10,8 @@
             <lightning-datatable 
                 key-field="Id" 
                 data={data} 
-                columns={columns}>
+                columns={columns}
+                onrowaction={actionHandle}>
             </lightning-datatable>
         </lightning-layout-item>
     </lightning-layout>
