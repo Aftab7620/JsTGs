@@ -4,5 +4,11 @@
             <lightning-button label="Display Data" onclick={handleClick}></lightning-button>
         </lightning-layout-item>
     </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-datatable key-field="Id" data={data} coloumn={columns}></lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
