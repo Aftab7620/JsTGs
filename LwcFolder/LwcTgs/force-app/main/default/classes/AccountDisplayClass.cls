@@ -10,5 +10,6 @@ public static void delAccount(Id accId) {
     delete [SELECT Id FROM Account WHERE Id = :accId];
 }
 
+
 }
     
