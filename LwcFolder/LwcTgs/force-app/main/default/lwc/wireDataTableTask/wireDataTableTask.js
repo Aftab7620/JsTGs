@@ -9,6 +9,14 @@ export default class WireDataTableTask extends LightningElement {
         {label: 'Account Name',fieldName: 'Name',type: 'text'},
         {label: 'Account Phone', fieldName: 'Phone', type: 'phone' },
         { label: 'Description', fieldName: 'Description', type: 'text' },
+        {
+            type: 'button',
+            typeAttributes: {
+                label: 'Delete',
+                name: 'delete',
+                variant: 'destructive'
+            }
+        }
     ]
 
     @wire(wireData)
