@@ -32,9 +32,9 @@ export default class DataTableTask extends LightningElement {
 
 actionHandle(event) {
     const row = event.detail.row;
-    console.log('Deleting Account Id:', row.Id);  // 🔎 Debug
+    console.log('Deleting Account Id:', row.Id);  
 
-    delData({ accId: row.Id })  // 👈 make sure spelling matches Apex param "accId"
+    delData({ accId: row.Id }) 
         .then(() => {
             console.log('Account deleted successfully');
             this.data = this.data.filter(acc => acc.Id !== row.Id);
