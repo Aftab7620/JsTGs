@@ -35,7 +35,7 @@ export default class WireDataTableTask extends LightningElement {
         console.log('Deleting Account Id:', row.Id);  
 
 
-        delAcData({acId:row.Id})
+        delAcData({accId:row.Id})
         .then(() => {
             console.log('Account deleted successfully');
             this.data = this.data.filter(acc => acc.Id !== row.Id);
