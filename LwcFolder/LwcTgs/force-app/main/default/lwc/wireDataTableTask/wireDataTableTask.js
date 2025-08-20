@@ -1,5 +1,6 @@
 import { LightningElement,track,wire } from 'lwc';
 import wireData from '@salesforce/apex/wireAccountClass.getAccountsWire';
+import delAcData from '@salesforce/apex/wireAccountClass.deleteAccount';
 
 export default class WireDataTableTask extends LightningElement {
 
@@ -28,4 +29,19 @@ export default class WireDataTableTask extends LightningElement {
             console.log(error);
         }
     }
+
+    handleAction(event){
+        const row = event.detail.row;
+        console.log('Deleting Account Id:', row.Id);  
+
+
+        delAcData({acId:row.Id})
+        .then(() => {
+            console.log('Account deleted successfully');
+            this.data = this.data.filter(acc => acc.Id !== row.Id);
+        })
+        .catch(error => {
+            console.error('Error deleting:', error);
+        });
+}
 }
