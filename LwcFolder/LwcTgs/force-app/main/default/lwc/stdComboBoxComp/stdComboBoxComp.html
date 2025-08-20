@@ -1,3 +1,27 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-input type="text" label="Search Contact" onchange={handleChange}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-combobox name="ComboBox" label="Contact List" placeholder="Select an item" options={data} value={valueChoosen} onchange={handleSelect}>
+            </lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+              <template if:true={valueChoosen}>
+                <p class="slds-m-top_medium">
+                    ✅ You selected: <b>{valueChoosen}</b>  
+                    
+                </p>
+            </template>
+
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
