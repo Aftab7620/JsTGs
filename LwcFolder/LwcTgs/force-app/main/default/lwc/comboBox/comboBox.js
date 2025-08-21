@@ -2,6 +2,7 @@ import { LightningElement } from 'lwc';
 
 export default class ComboBox extends LightningElement {
 
+    selectedVal='';
     get items() {
         return [
             {
@@ -20,5 +21,10 @@ export default class ComboBox extends LightningElement {
                 "label": "NEWZEALAND",
                 "value":"NZ"
 }]
+    }
+
+    handleClick(event){
+
+        this.selectedVal=event.target.value;
     }
 }

@@ -1,3 +1,8 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-combobox name="country" label="Country" value={selectedVal} options={items} onchange={handleClick}></lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
