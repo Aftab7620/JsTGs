@@ -3,10 +3,15 @@ import acData from '@salesforce/apex/accountWireClass.getAccounts';
 
 export default class WireAccountDatatable extends LightningElement {
 
-    input;
+    input='';
+
+    @track Account=[];
+
 
     @track colomn=[
-        {label}
+        {label:'Account Name',fieldName:'Name'},
+        {label:'Description',fieldName:'Description'}
+ 
     ]
 
     handleName(event){
@@ -14,5 +19,10 @@ export default class WireAccountDatatable extends LightningElement {
     }
 
     @wire(acData,{ip:'$input'})
-    wiredAcData;
+    wiredAcData({error,data}){
+        if(data)
+        {
+        this.Account=data;
+        }
+    }
 }
