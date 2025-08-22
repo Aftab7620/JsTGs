@@ -6,5 +6,6 @@ export default class ParentCompCtoP extends LightningElement {
 
     handleChange(event){
         this.typedval=event.detail;
+        console.log(this.typedval);
     }
 }
