@@ -5,7 +5,7 @@ export default class WireAccountNormal extends LightningElement {
 
     input;
 
-    @wire(acData)
+    @wire(acData,{ip:'$input'})
     accData;
 
     handleName(event){
