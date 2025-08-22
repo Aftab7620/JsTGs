@@ -20,12 +20,12 @@ export default class ImperativeContact extends LightningElement {
     }
 
     handleSubmit(){
-        conData({fname:this.firstName,lname:this.lastName,phone:this.contact})
+        conData({Fname:this.firstName,Lname:this.lastName,phone:this.contact})
         .then(result => {
             alert('inserted');
         })
         .catch(error => {
-            alert(error);
+            console.log(error);
         })
         
 
