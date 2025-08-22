@@ -1,3 +1,19 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-input label="Enter First Name" onchange={handleFname}></lightning-input>
+            <lightning-input label="Enter Last Name" onchange={handleLname}></lightning-input>
+            <lightning-input label="Enter Contact" onchange={handlePhone}></lightning-input>
+            
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    
     
 </template>
