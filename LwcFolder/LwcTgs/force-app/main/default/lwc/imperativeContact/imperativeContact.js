@@ -1,3 +1,5 @@
 import { LightningElement } from 'lwc';
 
-export default class ImperativeContact extends LightningElement {}
+export default class ImperativeContact extends LightningElement {
+    
+}
