@@ -1,4 +1,5 @@
 import { LightningElement } from 'lwc';
+import insertData from '@salesforce/apex/AccountConClass.insertAcc';
 
 export default class AccConComp extends LightningElement {
 
@@ -17,5 +18,17 @@ export default class AccConComp extends LightningElement {
     handleLname(event){
         this.lastName=event.detail;
     }
-    
+
+
+    handleSubmit(){
+        insertData({accName:accData,Fname:this.firstName,Lname:this.lastName})
+        .then(result=>{
+            console.log(result);
+            alert('Account Inserted');
+        })
+        .catch(error=>{
+            console.log(error); 
+            alert('Account not Inserted');})
+
+    }
 }
