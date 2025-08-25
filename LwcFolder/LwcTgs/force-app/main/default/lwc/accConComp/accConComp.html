@@ -1,21 +1,21 @@
 <template>
-    <lightning-layout>
-        <lightning-layout-item>
-            <c-account-comp onaccdata={handleAccount}></c-account-comp>
-        </lightning-layout-item>
-    </lightning-layout>
+    <lightning-card title="Account & Contact">
+        <lightning-layout>
+            <lightning-layout-item>
+                <c-account-comp onaccdata={handleAccount}></c-account-comp>
+            </lightning-layout-item>
+        </lightning-layout>
 
-    <lightning-layout>
-        <lightning-layout-item>
-            <c-contact-comp onfname={handleFname} onlname={handleLname}></c-contact-comp>
-        </lightning-layout-item>
-    </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item>
+                <c-contact-comp onfname={handleFname} onlname={handleLname}></c-contact-comp>
+            </lightning-layout-item>
+        </lightning-layout>
 
-    <lightning-layout>
-        <lightning-layout-item>
-            <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
-        </lightning-layout-item>
-    </lightning-layout>
-
-    
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
 </template>
