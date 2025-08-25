@@ -1,4 +1,15 @@
 <template>
-    
+    <lightning-layout>
+        <lightning-layout-item>
+            <c-account-comp onaccdata={handleAccount}></c-account-comp>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <c-contact-comp onfname={handleFname} onlname={handleLname}></c-contact-comp>
+        </lightning-layout-item>
+    </lightning-layout>
+
     
 </template>
