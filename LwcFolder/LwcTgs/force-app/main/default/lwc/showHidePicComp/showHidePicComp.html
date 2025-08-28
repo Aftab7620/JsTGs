@@ -1,3 +1,15 @@
 <template>
+    <lightning-layout horizontal-align="center" lwc:if={show} >
+        <lightning-layout-item size="6" class="slds-box">
+            <img src="https://plus.unsplash.com/premium_photo-1675621475704-f33e4b369b98?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhpZ2glMjByZXMlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D">
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout  horizontal-align="center">
+        <lightning-layout-item class="slds-m_top_medium">
+            <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
     
 </template>
