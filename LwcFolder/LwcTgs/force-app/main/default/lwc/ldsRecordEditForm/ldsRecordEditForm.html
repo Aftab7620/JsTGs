@@ -1,3 +1,12 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item title="Edit Form">
+            <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId}>
+                <lightning-input-field field-name={NameField} label="Name"></lightning-input-field>
+                <lightning-input-field field-name={PhoneField} label="Phone"></lightning-input-field>
+                <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
