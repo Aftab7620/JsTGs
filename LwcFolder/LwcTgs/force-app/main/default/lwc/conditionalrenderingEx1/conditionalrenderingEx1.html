@@ -1,8 +1,19 @@
 <template>
-    <lightning-layout>
-        <lightning-layout-item horizontal-align="center" if:true={show}>
+    <lightning-layout horizontal-align="center" if:true={show}>
+        <lightning-layout-item class="slds-box">
             <img src="https://www.congruentsoft.com/images/salesforce-consulting/sf-consulting-top-image.jpg">
         </lightning-layout-item>
     </lightning-layout>
+
+    <lightning-layout horizontal-align="center" if:false={show}>
+        <lightning-layout-item class="slds-box">
+            <img src="https://www.adaptive-shield.com/wp-content/uploads/2024/07/blog-img-Salesforce-Links-Remediation.png">
+        </lightning-layout-item>
+    </lightning-layout> 
     
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="Show" onclick={handleClick}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>
