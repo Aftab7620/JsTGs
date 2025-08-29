@@ -1,3 +1,22 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item size="4">
+            <c-ref-child prop-one="Hiii" prop-two="Good Morning" lwc:ref="first"></c-ref-child>
+        </lightning-layout-item>
+
+         <lightning-layout-item size="4">
+            <c-ref-child prop-one="Heyy" prop-two="Good Afternoon" lwc:ref="second"></c-ref-child>
+        </lightning-layout-item>
+
+         <lightning-layout-item size="4">
+            <c-ref-child prop-one="Hloo" prop-two="Good Night" lwc:ref="third"></c-ref-child>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <lightning-button label="Click Me" onclick={alertValue}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
