@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout multiple-rows>
+        <template iterator:it={images}>
+
+            <lightning-layout-item key={it.value.url} lwc:if={it.value.show} size="6">
+                <img src={it.value.url} >
+
+
+            </lightning-layout-item>
+
+
+
+        </template>
+        
+    </lightning-layout>
+    
+</template>
