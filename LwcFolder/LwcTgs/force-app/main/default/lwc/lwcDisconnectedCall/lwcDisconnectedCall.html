@@ -1,13 +1,25 @@
 <template>
-    <lightning-layout>
+    <lightning-layout horizontal-align="center">
         <lightning-layout-item>
             <lightning-input type="text" label="Search" value={txt} onchange={handleChange}></lightning-input>
         </lightning-layout-item>
     </lightning-layout>
 
-    <lightning-layout>
+    <lightning-layout horizontal-align="center">
         <lightning-layout-item>
             {dummyData}
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout horizontal-align="center" lwc:if={showData}>
+        <lightning-layout-item>
+            <c-lwc-child-demo></c-lwc-child-demo>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout horizontal-align="center" >
+        <lightning-layout-item>
+            <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
         </lightning-layout-item>
     </lightning-layout>
 
