@@ -1,31 +1,30 @@
-import { LightningElement, track, wire } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import conData from '@salesforce/apex/ContactSearchController.searchForContacts';
 
 export default class StdComboBoxComp extends LightningElement {
-
     @track txt = '';                     
     @track data = [];                   
-   @track valueChoosen='';  
-
-   
-    @wire(conData, {searchText:'$txt'})
-    contacts({ error, data }) {
-        if (data) this.data = data.map(name => ({label:name.Name,value:name.Name }));
-            if (this.data.length === 0) {
-                this.data = [{ label: 'No contacts found', value: '' }];
-            }
-        else if (error) {
-           console.error('Error retrieving contacts:', error);
-        }
-    }
+    @track valueChoosen = '';  
 
     handleChange(event) {
         this.txt = event.target.value;
+
+        conData({ searchText: this.txt })
+            .then(result => {
+                if (result && result.length > 0) {
+                    
+                    this.data = result.map(c => ({ label: c.Name, value: c.Name }));
+                } else {
+                    this.data = [{ label: 'No contacts found', value: '' }];
+                }
+            })
+            .catch(error => {
+                console.error('Error retrieving contacts:', error);
+                this.data = [{ label: 'Error retrieving contacts', value: '' }];
+            });
     }
 
-   
     handleSelect(event) {
-        this.valueChoosen = event.detail.value;  
-        
+        this.valueChoosen = event.detail.value;
     }
 }
