@@ -2,6 +2,8 @@ import { LightningElement } from 'lwc';
 
 export default class LwcChildDemo extends LightningElement {
 
+    testProp;
+
     constructor(){
         super();
         console.log('Child Constructor');
@@ -9,6 +11,7 @@ export default class LwcChildDemo extends LightningElement {
 
     connectedCallback(){
         console.log('Child Connected Callback');
+        console.log('check' +this.testProp.name);
     }
 
     renderedCallback(){
@@ -18,5 +21,5 @@ export default class LwcChildDemo extends LightningElement {
     disconnectedCallback(){
         console.log('Child Disconnected Callback');
     }
-    
+
 }

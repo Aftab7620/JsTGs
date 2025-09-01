@@ -27,6 +27,12 @@ export default class LwcDisconnectedCall extends LightningElement {
         console.log('Rendered Callback called');
     }
 
+    errorCallback(error, stack) {
+        console.log('Error Callback called');
+        console.log(error);
+        console.log(stack);
+    }
+
     handleChange(event) {
         this.dummyData = event.target.value;
 
