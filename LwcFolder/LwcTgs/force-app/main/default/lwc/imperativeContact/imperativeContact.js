@@ -6,6 +6,7 @@ export default class ImperativeContact extends LightningElement {
     firstName='';
     lastName='';
     contact='';
+    
 
     handleFname(event){
         this.firstName=event.target.value;
