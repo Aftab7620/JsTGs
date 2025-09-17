@@ -1,3 +1,15 @@
-import { LightningElement } from 'lwc';
+import { api, LightningElement } from 'lwc';
 
-export default class FileUploadComp extends LightningElement {}
+export default class FileUploadComp extends LightningElement {
+
+    @api recordId;
+
+    get accpetedFormats(){
+        return['.pdf','.png']
+    }
+
+    handleUploadFinished(event){
+        const uploadedFiles = event.detail.files;
+        alert('File uploaded Sucessfully');
+    }
+}

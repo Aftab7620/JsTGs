@@ -1,3 +1,9 @@
 <template>
+    <lightning-layout>
+        <lightning-layout-item>
+          <lightning-file-upload label="Upload File" name="FileUploader" record-id={recordId} accept={acceptedFormats} onuploadfinished={handleUploadFinished}>
+          </lightning-file-upload>
+        </lightning-layout-item>
+    </lightning-layout>
     
 </template>
