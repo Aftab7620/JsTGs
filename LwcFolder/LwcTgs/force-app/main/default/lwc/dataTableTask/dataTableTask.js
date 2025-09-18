@@ -23,7 +23,7 @@ export default class DataTableTask extends LightningElement {
     handleClick(){
         acData().then(result=>{
             this.data=result;
-            console.log('Accounts:', result); // Debug
+            console.log('Accounts:', result);
         })
         .catch(error=>{
             console.log(error);

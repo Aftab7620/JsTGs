@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Contact Search">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8" padding="around-small">
+                <lightning-input type="search" label="Search by Name" value={searchKey} onchange={handleSearchChange}></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-button label="Search" onclick={handleSearch} variant="brand"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows class="slds-m-top_medium">
+            <lightning-layout-item size="12">
+                <c-contact-search-child contacts={contacts}></c-contact-search-child>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,12 +1,14 @@
 public with sharing class ContactSearchController {
-   
     @AuraEnabled(cacheable=true)
-    public static list<Contact> searchForContacts(String searchText){
-
-        searchText = '%' + searchText + '%';
-        List<Contact> listContact =[SELECT Name, Phone, Email, Title, Id FROM Contact WHERE Name LIKE :searchText]; 
-        
-        return listContact;
-       
+    public static List<Contact> searchContacts(String searchKey) {
+        if (String.isBlank(searchKey)) {
+            return new List<Contact>();
+        }
+        return [
+            SELECT Id, Name, Email, Phone, Account.Name
+            FROM Contact
+            WHERE Name LIKE :('%' + searchKey + '%')
+            LIMIT 50
+        ];
     }
 }
